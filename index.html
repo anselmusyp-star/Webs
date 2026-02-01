@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Fisika: Medan Magnet</title>
+    <style>
+        /* RESET & BASIC SETUP */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #2c3e50;
+        }
+
+        /* NAVIGATION BAR */
+        .nav-bar {
+            background-color: #2c3e50;
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .nav-bar a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin: 0 25px;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-bar a:hover {
+            background-color: #f39c12;
+            color: white;
+        }
+
+        .nav-bar a.active {
+            background-color: #f39c12; /* Penanda halaman yang sedang dibuka */
+            color: white;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            opacity: 0.9;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        /* CONTENT CONTAINER */
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: -30px auto 40px; /* Overlap effect ke header */
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* TYPOGRAPHY & SECTIONS */
+        section {
+            margin-bottom: 60px; /* Jarak antar bab */
+        }
+
+        h2 {
+            color: #1e3c72;
+            border-bottom: 4px solid #f39c12;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #2980b9;
+            margin-top: 30px;
+            font-size: 1.3em;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.05em;
+        }
+
+        /* IMAGES */
+        .materi-img {
+            display: block;
+            margin: 25px auto;
+            max-width: 100%; /* Agar responsif di HP */
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .materi-img:hover {
+            transform: scale(1.02); /* Efek zoom sedikit saat di-hover */
+        }
+
+        /* HIGHLIGHT BOX (Untuk Rumus/Penting) */
+        .highlight-box {
+            background-color: #eef7fb;
+            padding: 20px;
+            border-left: 6px solid #2980b9;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .note {
+            background-color: #fff8e1;
+            border-left: 6px solid #f39c12;
+            padding: 15px;
+            margin-top: 10px;
+            font-size: 0.95em;
+        }
+
+        /* FOOTER */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #2c3e50;
+            color: #bdc3c7;
+            font-size: 0.9em;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-bar">
+        <a href="index.html" class="active">Materi Belajar</a>
+        <a href="latihan.html">Latihan Soal & Pembahasan</a>
+    </div>
+
+    <header>
+        <h1>Medan Magnet</h1>
+        <p>Rangkuman Materi Fisika Kelas 12 SMA</p>
+    </header>
+
+    <div class="container">
+        
+        <section id="intro">
+            <h2>Pengantar</h2>
+            <p>
+                Halo teman-teman! Pernah bertanya kenapa kompas selalu menunjuk ke utara? Atau bagaimana motor listrik di kipas angin bisa berputar? Jawabannya ada di <b>Medan Magnet</b>.
+            </p>
+            <p>
+                Di kelas 12 ini, kita tidak hanya belajar tentang magnet batang, tapi kita akan mempelajari penemuan <b>Oersted</b>: <em>"Arus listrik yang mengalir pada kawat ternyata bisa menciptakan medan magnet di sekitarnya."</em> Mari kita bedah rumusnya satu per satu!
+            </p>
+        </section>
+
+        <section id="kawat-lurus">
+            <h2>1. Induksi Magnet pada Kawat Lurus</h2>
+            <p>
+                Medan magnet di sekitar kawat lurus bentuknya melingkar mengelilingi kawat tersebut. Arahnya ditentukan dengan <b>Kaidah Tangan Kanan</b> (Ibu jari = arus, genggaman jari = arah medan magnet).
+            </p>
+            
+            <h3>A. Kawat Lurus Pendek (Panjang Tertentu)</h3>
+            <p>
+                Jika panjang kawatnya terbatas (diketahui ujung-ujungnya), kita harus memperhitungkan sudut α dan β yang dibentuk dari titik pengamatan ke ujung kawat.
+            </p>
+            <img src="asset/Screenshot 2026-01-07 201134.png" alt="Rumus Kawat Lurus Pendek" class="materi-img">
+            
+            <h3>B. Kawat Lurus Panjang (Tak Hingga)</h3>
+            <p>
+                Jika kawatnya dianggap sangat panjang (tak hingga), rumusnya menjadi lebih sederhana karena sudutnya dianggap maksimal. Ini adalah rumus yang paling sering keluar di soal UN/UTBK.
+            </p>
+            <img src="asset/Screenshot 2026-01-07 201239.png" alt="Rumus Kawat Lurus Panjang" class="materi-img">
+            
+            <div class="highlight-box">
+                <strong>Tips Hafalan:</strong> Semakin besar Arus (I), medan magnet makin kuat. Semakin jauh Jarak (r/a), medan magnet makin lemah.
+            </div>
+        </section>
+
+        <section id="kawat-melingkar">
+            <h2>2. Kawat Melingkar & Toroida</h2>
+            <p>
+                Jika kawat lurus tadi kita tekuk menjadi lingkaran, medan magnetnya akan terpusat dan menjadi kuat di bagian tengah lingkaran tersebut.
+            </p>
+
+            <h3>A. Di Pusat Lingkaran</h3>
+            <p>
+                Untuk menghitung medan magnet persis di tengah-tengah kawat melingkar. Perhatikan jumlah lilitan (N) atau bagian lingkarannya (misal setengah lingkaran).
+            </p>
+            <img src="asset/Screenshot 2026-01-07 201258.png" alt="Rumus Kawat Melingkar Pusat" class="materi-img">
+
+            <h3>B. Di Sumbu Lingkaran (Titik P Berjarak x)</h3>
+            <p>
+                Jika titiknya tidak pas di tengah, tapi bergeser sedikit menjauh dari pusat lingkaran (membentuk sudut θ), gunakan rumus ini:
+            </p>
+            <img src="asset/Screenshot 2026-01-07 201307.png" alt="Rumus Sumbu Lingkaran" class="materi-img">
+
+            <h3>C. Toroida (Solenoida Melingkar)</h3>
+            <p>
+                Toroida adalah kumparan kawat yang dibentuk melingkar seperti donat. Medan magnetnya terkurung di dalam rongga donat tersebut.
+            </p>
+            <div class="note">
+                Hati-hati dengan jari-jari efektif (Ref)! Jika diketahui jari-jari dalam (R1) dan luar (R2), kamu harus mencari rata-ratanya dulu.
+            </div>
+            <img src="asset/Screenshot 2026-01-07 201328.png" alt="Rumus Toroida" class="materi-img">
+        </section>
+
+        <section id="solenoida">
+            <h2>3. Solenoida (Kumparan Panjang)</h2>
+            <p>
+                Solenoida adalah kawat yang dililit memanjang (seperti per/pegas). Sifatnya mirip magnet batang permanen, punya kutub Utara dan Selatan.
+            </p>
+            <p>
+                Ada dua kondisi yang harus dibedakan saat mengerjakan soal Solenoida:
+                <ul>
+                    <li><strong>Di Pusat Solenoida:</strong> Nilai medannya maksimal (paling kuat).</li>
+                    <li><strong>Di Ujung Solenoida:</strong> Nilainya tepat setengah dari nilai di pusat.</li>
+                </ul>
+            </p>
+            <img src="asset/Screenshot 2026-01-07 201319.png" alt="Rumus Solenoida" class="materi-img">
+        </section>
+
+        <section id="gaya-lorentz">
+            <h2>4. Gaya Lorentz</h2>
+            <p>
+                Ini adalah bagian paling seru! Gaya Lorentz adalah gaya fisik (dorongan/tarikan) yang muncul ketika kawat berarus diletakkan di dalam medan magnet. Inilah prinsip kerja motor listrik.
+            </p>
+
+            <h3>A. Pada Satu Kawat Berarus</h3>
+            <p>
+                Besar gaya (F) tergantung pada Kuat Medan Magnet (B), Arus (I), Panjang Kawat (L), dan sudut kemiringannya (sin θ).
+            </p>
+            <div class="highlight-box">
+                <strong>Kaidah Tangan Kanan Gaya Lorentz:</strong><br>
+                👍 Ibu Jari = Arus (I)<br>
+                👉 Telunjuk = Medan Magnet (B)<br>
+                ✋ Telapak Tangan (arah dorong) = Gaya Lorentz (F)
+            </div>
+            <img src="asset/Screenshot 2026-01-07 201351.png" alt="Gaya Lorentz Kawat Tunggal" class="materi-img">
+
+            <h3>B. Pada Dua Kawat Sejajar</h3>
+            <p>
+                Jika ada dua kawat diletakkan berdampingan:
+                <ul>
+                    <li>Arus <strong>Searah</strong> = Tarik Menarik (Cinta Bersemi ❤️)</li>
+                    <li>Arus <strong>Berlawanan</strong> = Tolak Menolak (Musuhan 💔)</li>
+                </ul>
+            </p>
+            <img src="asset/Screenshot 2026-01-07 201400.png" alt="Gaya Lorentz Dua Kawat" class="materi-img">
+            
+            <p>
+                Dan untuk kasus di mana resultan gaya nol di antara dua kawat, kita bisa menggunakan perbandingan jarak seperti gambar di bawah ini:
+            </p>
+            <img src="asset/Screenshot 2026-01-07 201251.png" alt="Resultan Nol Dua Kawat" class="materi-img">
+        </section>
+
+    </div>
+
+    <div class="footer">
+        <p>Tugas KTI Kelas 12</p>
+        <p>Dibuat dengan HTML & CSS  | &copy; 2026</p>
+    </div>
+
+</body>
+</html>

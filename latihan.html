@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan Soal - Medan Magnet</title>
+    <style>
+      /* Menggunakan gaya yang sama dengan index.html agar konsisten */
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f7f6;
+        color: #2c3e50;
+      }
+
+      header {
+        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        color: white;
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 900px;
+        margin: 20px auto;
+        background: white;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        border-bottom: 3px solid #f39c12;
+        padding-bottom: 10px;
+        color: #1e3c72;
+      }
+
+      /* Navigasi */
+      .nav-bar {
+        background: #2c3e50;
+        padding: 15px;
+        text-align: center;
+      }
+      .nav-bar a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0 20px;
+        font-size: 1.1em;
+      }
+      .nav-bar a:hover {
+        color: #f39c12;
+      }
+
+      /* Gaya Khusus Soal */
+      .soal-box {
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 40px;
+        background-color: #fff;
+      }
+
+      .soal-img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 10px auto;
+        border: 1px solid #eee;
+      }
+
+      /* GAYA BARU UNTUK DROPDOWN (DETAILS & SUMMARY) */
+      details {
+        margin-top: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden; /* Supaya sudutnya rapi */
+      }
+
+      summary {
+        background-color: #2980b9;
+        color: white;
+        padding: 15px;
+        cursor: pointer;
+        font-weight: bold;
+        list-style: none; /* Menghilangkan panah default di beberapa browser */
+        transition: background 0.3s;
+      }
+
+      summary:hover {
+        background-color: #1a5f7a;
+      }
+
+      /* Menambahkan ikon panah kustom */
+      summary::after {
+        content: "+";
+        float: right;
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+
+      details[open] summary::after {
+        content: "-";
+      }
+
+      .jawaban-content {
+        padding: 20px;
+        background-color: #e8f4f8;
+        border-top: 1px solid #ddd;
+      }
+
+      .diketahui {
+        font-family: monospace;
+        color: #d35400;
+        font-weight: bold;
+      }
+      .rumus-math {
+        font-style: italic;
+        font-weight: bold;
+        font-size: 1.1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav-bar">
+      <a href="index.html">Materi Belajar</a>
+      <a href="latihan.html" style="color: #f39c12"
+        >Latihan Soal & Pembahasan</a
+      >
+    </div>
+
+    <header>
+      <h1>Latihan Soal & Pembahasan</h1>
+      <p>Kupas Tuntas Masalah Medan Magnet</p>
+    </header>
+
+    <div class="container">
+      <div class="soal-box">
+        <h2>Soal 1: Kawat 1/4 Lingkaran</h2>
+        <img
+          src="asset/Screenshot 2025-12-08 215758.png"
+          alt="Soal Kawat Melingkar"
+          class="soal-img"
+        />
+
+        <p>
+          <strong>Pertanyaan:</strong> Jika besar arus I = 8 A dan jari-jari R =
+          10 cm, hitunglah besar medan magnet di titik P (titik O)!
+        </p>
+
+        <details>
+          <summary>Klik untuk melihat Pembahasan</summary>
+          <div class="jawaban-content">
+            <h3>Pembahasan:</h3>
+            <p>
+              Bagian kawat yang lurus arahnya sejajar dengan titik pusat, jadi
+              <strong>tidak menghasilkan medan magnet</strong>. Kita hanya perlu
+              menghitung bagian yang melengkung (busur).
+            </p>
+
+            <p><strong>1. Diketahui:</strong></p>
+            <ul class="diketahui">
+              <li>Arus (I) = 8 A</li>
+              <li>Jari-jari (R) = 10 cm = 0,1 meter</li>
+              <li>Bentuk = 1/4 Lingkaran (90 derajat)</li>
+            </ul>
+
+            <p><strong>2. Rumus:</strong></p>
+            <p class="rumus-math">
+              B = (μ₀ . I) / (2 . R) x (Bagian Lingkaran)
+            </p>
+
+            <p><strong>3. Perhitungan:</strong></p>
+            <p>
+              B = (4π . 10⁻⁷ . 8) / (2 . 0,1) x (1/4) <br />
+              B = (32π . 10⁻⁷) / (0,2) x 0,25 <br />
+              B = 160π . 10⁻⁷ x 0,25 <br />
+              <strong>B = 4π . 10⁻⁶ Tesla</strong>
+            </p>
+            <p>
+              <em>Jadi, besar medan magnet di titik P adalah 4π x 10⁻⁶ T.</em>
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="soal-box">
+        <h2>Soal 2: Kawat Melingkar (Sebagian)</h2>
+        <img
+          src="asset/Screenshot 2025-12-08 214142.png"
+          alt="Soal Kawat Busur Besar"
+          class="soal-img"
+        />
+
+        <p>
+          <strong>Pertanyaan:</strong> Jika besar R = 50 cm dan arus I = 2 A,
+          serta sudut celah yang kosong adalah 45°, hitunglah medan magnet di
+          titik P!
+        </p>
+
+        <details>
+          <summary>Klik untuk melihat Pembahasan</summary>
+          <div class="jawaban-content">
+            <h3>Pembahasan:</h3>
+            <p>
+              Perhatikan gambar! Kawat tersebut membentuk lingkaran tapi ada
+              bagian yang "hilang" sebesar 45°. Artinya, panjang kawat yang ada
+              adalah 360° - 45° = 315°.
+            </p>
+
+            <p><strong>1. Diketahui:</strong></p>
+            <ul class="diketahui">
+              <li>Arus (I) = 2 A</li>
+              <li>Jari-jari (R) = 50 cm = 0,5 meter</li>
+              <li>Bagian Lingkaran = 315° / 360° = 7/8 bagian</li>
+            </ul>
+
+            <p><strong>2. Perhitungan:</strong></p>
+            <p>
+              B = (μ₀ . I) / (2 . R) x (7/8) <br />
+              B = (4π . 10⁻⁷ . 2) / (2 . 0,5) x (7/8) <br />
+              B = (8π . 10⁻⁷) / (1) x 0,875 <br />
+              B = 8π . 10⁻⁷ x 0,875 <br />
+              <strong>B = 7π . 10⁻⁷ Tesla</strong>
+            </p>
+            <p><em>Jadi, besar induksi magnetiknya adalah 7π x 10⁻⁷ T.</em></p>
+          </div>
+        </details>
+      </div>
+
+      <div class="soal-box">
+        <h2>Soal 3: Kawat Sejajar (Sebagian)</h2>
+        <img
+          src="asset/Screenshot 2026-01-31 184252.png"
+          alt="Soal Kawat Busur Besar"
+          class="soal-img"
+        />
+
+        <p>
+          <strong>Pertanyaan:</strong> Jika I1 = 2A dan I2 = 3A, tentukan besar
+          medan magnet induksi total di titik P dan arahnya!
+        </p>
+
+        <details>
+          <summary>Klik untuk melihat Pembahasan</summary>
+          <div class="jawaban-content">
+            <h3>Pembahasan:</h3>
+            <p>
+              Perhatikan gambar! Terdapat dua kawat lurus panjang sejajar yang
+              dialiri arus searah (ke atas). Titik P berada di antara kedua
+              kawat, lebih dekat ke kawat kiri. Medan magnet di titik P berasal
+              dari kedua kawat, namun arahnya saling berlawanan, sehingga
+              resultan diperoleh dari selisih.
+            </p>
+
+            <p><strong>1. Diketahui:</strong></p>
+            <ul class="diketahui">
+              <li>Arus (I)1 = 2 A</li>
+              <li>Arus (I)2 = 3 A</li>
+              <li>Jarak titik P ke kawat kiri (R)1 = 2 cm = 0,02 meter</li>
+              <li>
+                Jarak titik P ke kawat kanan (R)2 = 6-4 = 4cm = 0,04 meter
+              </li>
+            </ul>
+
+            <p><strong>2. Perhitungan:</strong></p>
+            <p>
+              B1 = (μ₀ . I1) / (2 .π. R1) <br />
+              B1 = (4π . 10⁻⁷ . 2) / (2 .π .0,02) <br />
+              B1 = 2 x 10⁻⁵ T <br />
+              B2 = (μ₀ . I2) / (2 .π. R2) <br />
+              B2 = (4π . 10⁻⁷ . 3) / (2 .π .0,04) <br />
+              B2 = 1,5×10⁻⁵T <br />
+              Bt = B1 - B2<br />
+              Bt = (2-1,5) x 10⁻⁵<br />
+              <strong>B = 5 . 10⁻⁶ Tesla</strong>
+            </p>
+            <p>
+              <em
+                >Jadi, besar induksi magnetiknya adalah 5 x 10⁻⁶ T, masuk
+                bidang.</em
+              >
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="soal-box">
+        <h2>Soal 4: Suatu Titik Pada Sumbu Pusat Kawat melingkar</h2>
+        <img
+          src="asset/Screenshot 2026-02-01 162257.png"
+          alt="Soal Kawat Busur Besar"
+          class="soal-img"
+        />
+
+        <p>
+          <strong>Pertanyaan:</strong> Jika I = 8A dan R = 2πcm serta 𝜃=30° ,
+          tentukan medan magnet di titik P!
+        </p>
+
+        <details>
+          <summary>Klik untuk melihat Pembahasan</summary>
+          <div class="jawaban-content">
+            <h3>Pembahasan:</h3>
+            <p>
+              Perhatikan gambar! Kawat berbentuk lingkaran dengan jari-jari 𝑟
+              dan dialiri arus 𝐼. Titik P berada pada sumbu lingkaran, sehingga
+              medan magnet yang ditimbulkan arahnya sepanjang sumbu lingkaran.
+              Besar medan magnet di titik P dapat ditentukan menggunakan
+              hubungan medan magnet lingkaran dengan sudut 𝜃.
+            </p>
+
+            <p><strong>1. Diketahui:</strong></p>
+            <ul class="diketahui">
+              <li>Arus (I) = 8 A</li>
+
+              <li>Jari-jari (R) = 2π cm = 0,02π meter</li>
+              <li>Sudut (𝜃) = 30°</li>
+            </ul>
+
+            <p><strong>2. Perhitungan:</strong></p>
+            <p>
+              Bp = (μ₀ . I) / (2 . R) x sin³ 𝜃 <br />
+              Bp = (4π . 10⁻⁷ . 8) / (2 .0,02π ) x sin³ 30° <br />
+              Bp = (4π . 10⁻⁷ . 8) / (0,04π) x 1/8 <br />
+              Bp = 10⁻⁷ / 10⁻² <br />
+              Bp = 10⁻⁵<br />
+              <strong>Bp = 10⁻⁵ Tesla</strong>
+            </p>
+            <p>
+              <em
+                >Besar medan magnet di titik P adalah 10⁻⁵ T dengan arah ke
+                atas.</em
+              >
+            </p>
+          </div>
+        </details>
+      </div>
+
+      <div class="soal-box">
+        <h2>Soal 6: Pada Kawat Kumparan/Solenoida</h2>
+        <img
+          src="asset/Screenshot 2026-02-01 162356.png"
+          alt="Soal Kawat Busur Besar"
+          class="soal-img"
+        />
+
+        <p>
+          <strong>Pertanyaan:</strong> Jika I = 10A dan L = 5 cm, serta jumlah
+          lilitan kumparan sebanyak 200, tentukan medan magnet: <br />
+          a. di pusat solenoida <br />
+          b. di ujung solenoida
+        </p>
+
+        <details>
+          <summary>Klik untuk melihat Pembahasan</summary>
+          <div class="jawaban-content">
+            <h3>Pembahasan:</h3>
+            <p>
+              Perhatikan gambar! Kawat dililit membentuk solenoida dengan
+              panjang 𝐿 dan jumlah lilitan tertentu. Medan magnet solenoida
+              bergantung pada jumlah lilitan per satuan panjang dan arus listrik
+              yang mengalir.
+            </p>
+
+            <p><strong>1. Diketahui:</strong></p>
+            <ul class="diketahui">
+              <li>Arus (I) = 10 A</li>
+              <li>Panjang (L) = 5 cm = 0,05 meter</li>
+              <li>Lilitan (N) = 200</li>
+              <li>
+                Jumlah lilitan per satuan panjang (n) = N /L = 200 / 0,05 = 4000
+                lilitan/m
+              </li>
+            </ul>
+
+            <p><strong>2. Perhitungan:</strong></p>
+            <p>
+              a. Medan magnet di pusat solenoida <br />
+              B = μ₀.n.I <br />
+              B = (4π . 10⁻⁷ . 4000 . 10) <br />
+              B = 16π x 10⁻³ T <br />
+              B = 16π mT <br /><br />
+              b. Medan magnet di ujung solenoida <br />
+              B = (1/2 .16π x 10⁻³)<br />
+              B = 8π x 10⁻³ T<br />
+              B = 8π mT <br /><br />
+
+              <strong>a. B = 16π mT <br />b. B = 8π mT</strong>
+            </p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <footer
+      style="
+        text-align: center;
+        padding: 20px;
+        background: #2c3e50;
+        color: white;
+      "
+    >
+      <p>&copy; 2026 Tugas KTI SMA</p>
+    </footer>
+  </body>
+</html>
